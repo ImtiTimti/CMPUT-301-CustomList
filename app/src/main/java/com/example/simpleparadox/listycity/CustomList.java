@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import androidx.core.widget.TextViewCompat;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -18,13 +20,14 @@ public class CustomList extends ArrayAdapter<City> {
 
     private ArrayList<City> cities;
     private Context context;
+    private CustomList list;
+
 
     public CustomList(Context context, ArrayList<City> cities){
         super(context,0, cities);
         this.cities = cities;
         this.context = context;
     }
-
 
     @NonNull
     @Override
@@ -47,4 +50,17 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
+
+    //this function will get the size of list
+    public int getCount() {
+        return cities.size();
+    }
+
+    //this function will add a city object int the list
+    public void addCity(City city) {
+        return;
+    }
+
+
+
 }
