@@ -58,6 +58,7 @@ public class CustomList extends ArrayAdapter<City> {
 
     //this function will add a city object int the list
     public void addCity(City city) {
+        cities.add(city);
         return;
     }
 
